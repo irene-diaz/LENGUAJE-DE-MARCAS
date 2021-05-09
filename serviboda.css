@@ -1,0 +1,199 @@
+/*CABERCERA, EN TODAS LAS PAGINAS IGUAL*/
+
+/*MEDIDAS ESTANDARES DE TODA LA PAGINA WEB*/
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    color: darkCyan;
+    font-family: serif;
+    background-color: white;
+    padding: 0.5em 2vw;
+}
+
+div.logo{ /*LOGO DE LA EMPRESA EN TODAS LAS PAGINAS*/
+    text-align:center;
+}
+
+#barra{
+    width: 1200px;
+    margin: 25px auto;
+}
+#barra ul{
+    list-style-type: none;
+    text-align: center;
+    font-size: 5mm;
+    font-family:serif;
+}
+ #barra li a {
+    display:block;
+    padding: 10px 100px;
+    width: auto;
+    color:white;
+    background-color: darkcyan;
+    text-decoration:none;
+ }
+ .menu > li{
+     position: relative; /*sirve para aseguranos de que de ninguna manera se va ir a ninuna otra parted e la pagina*/
+     display:inline-block;
+ }
+ #barra li a:hover{
+     color:darkcyan;
+     background-color:white;
+     /*transicion del cabio de color*/
+     transition: all ,1s;
+ }
+
+ /*AQUI VA IR LA BARRA DESPLEGABLE, LLAMADA CON LA CLASE SUBMENU*/
+
+ .submenu{
+     position: absolute;
+     width: 100%;
+     display: none; /*con esto hacmoes desaparecer al submenu*/
+ }
+ .submenu li a{
+     display:block;
+     text-align: center;
+ }
+ .menu li:hover .submenu{
+    display: block;
+ }
+
+/*INFO PAGINA INICIO*/
+ 
+ #imagen img{
+    width: 1150px; 
+    text-align: center;
+    margin:auto;
+    display: block;  
+ }
+/*AQUI EMPIEZA EL FOOTER, TODAS LAS PAG IGUAK*/
+ footer{
+     margin: 0px;
+     box-sizing: border-box;
+     font-family: serif;
+     background-color: white;
+     color: darkk-cyan;
+     width: 100%
+
+ }
+/*2 PARTES DE FOOTER (CONTAINER-BODY Y CONTAINER-FOOTER) Y CONTAINER-FOOTER-ALL ENGLOBA A LA CLASE QUE CONTIENE TODOS LOS FOOTERS*/
+ .container-footer-all{
+     width:100%;
+     max-width: 1200px;
+     margin:auto;
+     padding: 40px;
+ } 
+/*CONTAINER BODY: 3 COLUMNAS*/
+ .container-body{
+     display:flex;  
+     justify-content: space-around;
+ }
+/*COLUM1*/
+ .colum1{
+     max-width: 400px;
+ }
+
+ .colum1 h1{
+     font-size: 22px;
+     color: black;
+ }
+
+ .colum1 p{
+     font-size: 14px;
+     margin-top: 20px;
+ }
+/*COLUM2*/
+ .colum2{
+     max-width: 400px;   
+ }
+
+ .colum2 h1{
+    font-size: 22px;
+    color: black;
+}
+.colum2 .row{
+    margin-top: 20px;
+    display:flex;
+}
+/*formato imagenes iconos redes sociales*/
+.row img{
+    width: 40px;
+    height: 40px;  
+}
+
+.row label{
+    margin-top:10px;
+    margin-left:20px;
+
+}
+
+/*COLUM 3*/
+.colum3{
+    max-width: 400px;   
+}
+
+.colum3 h1{
+    font-size: 22px;
+    color:black;
+}
+
+.row2{
+    margin-top: 20px;
+    display:flex;
+}
+
+.casa{
+    width: 44px;
+    height: 44px;  
+}
+.movil{
+    width: 36px;
+    height: 36px; 
+}
+.sobre{
+    width: 36px;
+    height: 36px; 
+}
+.row2 label{
+    margin-top:10px;
+    margin-left: 20px;
+    max-width: 130px;
+}
+/*AQUI EMPIEZA CONTAINER FOOOTER*/
+
+.container-footer{
+    width: 100% ;
+    padding: 10px;
+}
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display:flex;
+    padding:20px;
+    justify-content: space-between;
+}
+.copyright{
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color:black;
+}
+
+/*HACER QUE LA PAGINA SEA RESPONSIVE*/
+@media screen and (max-width: 1100px){
+    .container-body{
+        flex:wrap;  
+    } 
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
